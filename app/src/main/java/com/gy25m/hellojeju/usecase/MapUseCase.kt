@@ -4,4 +4,7 @@ import com.gy25m.hellojeju.repository.MapRepository
 import javax.inject.Inject
 
 class MapUseCase @Inject constructor(private  val mapRepository: MapRepository) {
+    suspend fun bb()=mapRepository.getInfo()
+
+
 }
