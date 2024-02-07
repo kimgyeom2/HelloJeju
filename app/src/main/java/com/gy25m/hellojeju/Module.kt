@@ -42,7 +42,7 @@ object MyModule {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .baseUrl("https://api.visitjeju.net/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient) // OkHttpClient 설정
             .build()

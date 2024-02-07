@@ -8,7 +8,7 @@ data class Jeju(
     val pageSize:Int,
     val pageCount:Int,
     val currentPage:Int,
-    val items:JejuIntem,
+    val items:List<JejuIntem>,
 )
 
 data class JejuIntem(

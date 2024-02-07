@@ -10,7 +10,7 @@ class MapRepositoryImpl @Inject constructor(
     private val apiService: MapApiService,
     private val database: AppDatabase
 ): MapRepository {
-    override suspend fun getInfo(): List<Jeju> = apiService.getJeJuInfo("rtx2xxs6v1kepxlb","kr","c3")
+    override suspend fun getInfo(): Jeju = apiService.getJeJuInfo("rtx2xxs6v1kepxlb","kr","c3")
 
 
 

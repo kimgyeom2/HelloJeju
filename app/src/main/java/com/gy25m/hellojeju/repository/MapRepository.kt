@@ -4,7 +4,7 @@ import com.gy25m.hellojeju.model.Jeju
 
 interface MapRepository  {
 
-    suspend fun getInfo():List<Jeju>
+    suspend fun getInfo():Jeju
 
 
 }

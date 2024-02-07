@@ -16,8 +16,8 @@ class MapViewModel @Inject constructor(private val mapUseCase: MapUseCase):ViewM
 
     fun aa(){
         viewModelScope.launch {
-            withContext(Dispatchers.IO){ var aa=mapUseCase.bb()
-            Log.i("gyeom",aa.toString())}}
+            withContext(Dispatchers.IO) { var aa = mapUseCase.bb() }
+        }
     }
 
 }
