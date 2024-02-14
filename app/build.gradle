@@ -66,11 +66,14 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.5.2'
     implementation 'androidx.room:room-ktx:2.5.2'
 
-    // Coroutine
+    //Coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
+    //LifeCycle
     implementation "androidx.activity:activity-ktx:1.6.1"
-   // implementation "androidx.activity:frgament-ktx:1.6.1"
+
+    //Lottie Animation
+    implementation "com.airbnb.android:lottie:6.3.0"
 }
