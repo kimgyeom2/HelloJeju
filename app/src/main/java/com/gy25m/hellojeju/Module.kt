@@ -3,7 +3,9 @@ package com.gy25m.hellojeju
 import android.content.Context
 import androidx.room.Room
 import com.gy25m.hellojeju.database.AppDatabase
+import com.gy25m.hellojeju.repository.LoginRepository
 import com.gy25m.hellojeju.repository.MapRepository
+import com.gy25m.hellojeju.repositoryimpl.LoginRepositoryImpl
 import com.gy25m.hellojeju.repositoryimpl.MapRepositoryImpl
 import com.gy25m.hellojeju.service.MapApiService
 import dagger.Module
@@ -15,6 +17,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -24,13 +27,17 @@ object MyModule {
 
     @Provides
     @Singleton
-    fun provideMyInterface(retrofit: MapApiService,
-                           appDatabase: AppDatabase): MapRepository = MapRepositoryImpl(retrofit,appDatabase)
+    fun provideMapRepository(@Named("visitJeJu")retrofit: MapApiService,appDatabase: AppDatabase): MapRepository = MapRepositoryImpl(retrofit,appDatabase)
+
+    @Provides
+    @Singleton
+    fun provideLoginRepository(): LoginRepository = LoginRepositoryImpl()
 
 
     @Provides
     @Singleton
-    fun provideRetrofit(): MapApiService{
+    @Named("visitJeJu")
+    fun provideMapRetrofit(): MapApiService{
         // HTTP 인터셉터 생성
         val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
@@ -46,6 +53,7 @@ object MyModule {
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient) // OkHttpClient 설정
             .build()
+
             .create(MapApiService::class.java)
     }
 

@@ -1,4 +1,4 @@
-package com.gy25m.hellojeju.viewmodel
+package com.gy25m.hellojeju.ui.map.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

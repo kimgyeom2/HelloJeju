@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.gy25m.hellojeju.viewmodel.MapViewModel" />
+            type="com.gy25m.hellojeju.ui.map.viewmodel.MapViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

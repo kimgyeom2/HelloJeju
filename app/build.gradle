@@ -76,4 +76,7 @@ dependencies {
 
     //Lottie Animation
     implementation "com.airbnb.android:lottie:6.3.0"
+
+    //Kakao Login
+    implementation "com.kakao.sdk:v2-user:2.19.0"
 }
