@@ -5,18 +5,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gy25m.hellojeju.usecase.MapUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.Flow
 
 @HiltViewModel
 class MapViewModel @Inject constructor(private val mapUseCase: MapUseCase):ViewModel() {
 
     fun aa(){
         viewModelScope.launch {
-            withContext(Dispatchers.IO) { var aa = mapUseCase.bb() }
+             mapUseCase.bb().collect{
+                it.items.map {p->
+                    Log.i("xxx",p.title)
+                }
+             }
         }
     }
 
