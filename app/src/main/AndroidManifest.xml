@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.gy25m.hellojeju.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +20,7 @@
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.gy25m.presentation.ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,10 +29,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name="com.gy25m.presentation.ui.main.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.map.MapActivity"
+            android:name="com.gy25m.presentation.ui.map.MapActivity"
             android:exported="true" />
     </application>
 
