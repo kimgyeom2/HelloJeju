@@ -36,6 +36,12 @@ android {
     buildFeatures{
         dataBinding=true
         viewBinding=true
+        buildConfig=true
+        compose=true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion="1.3.2"
     }
 }
 
@@ -84,16 +90,31 @@ dependencies {
     implementation(Libraries.DataStore.DATA_STORE)
 
     //Coroutine
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation (Libraries.Coroutine.COROUTINE_CORE)
+    implementation (Libraries.Coroutine.COROUTINE_ANDROID)
+
 
     //LifeCycle
     implementation ("androidx.activity:activity-ktx:1.6.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+
+    //Kakao Login
+    implementation (Libraries.Kakao.KAKAO_SDK)
 
     //Lottie Animation
     implementation ("com.airbnb.android:lottie:6.3.0")
 
-    //Kakao Login
-    implementation ("com.kakao.sdk:v2-user:2.19.0")
+    //Compose
+    val composeBom = platform(Libraries.Compose.COMPOSE_BOM)
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation(Libraries.Compose.COMPOSE_UI)
+    implementation(Libraries.Compose.COMPOSE_PREVIEW)
+    debugImplementation(Libraries.Compose.COMPOSE_UI_TOOL)
+    androidTestImplementation(Libraries.Compose.COMPOSE_UI_TEST)
+    debugImplementation(Libraries.Compose.COMPOSE_UI_TEST2)
+    implementation(Libraries.Compose.COMPOSE_ACTIVITY)
+    implementation(Libraries.Compose.COMPOSE_VIEWMODEL)
+    implementation(Libraries.Compose.COMPOSE_LIVEDATA)
 }

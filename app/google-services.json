@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434392575699",
+    "project_id": "hellojeju-e1290",
+    "storage_bucket": "hellojeju-e1290.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434392575699:android:6b6eb745f9433857056e26",
+        "android_client_info": {
+          "package_name": "com.gy25m.hellojeju"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfghmwipdbY5gN6iRPoqTIN0v80Zk6n6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

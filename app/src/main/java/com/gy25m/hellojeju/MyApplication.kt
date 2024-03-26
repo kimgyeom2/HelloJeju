@@ -11,5 +11,10 @@ class MyApplication:Application() {
         super.onCreate()
 
         KakaoSdk.init(this, "ca1beef60085eb4f1b338dde9d5e2ec5")
+        initFirebase()
+    }
+
+    private fun initFirebase() {
+
     }
 }

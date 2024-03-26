@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -50,6 +51,7 @@ android {
         buildConfig = true
     }
 
+
 }
 
 dependencies {
@@ -70,44 +72,17 @@ dependencies {
     implementation(Libraries.KTX.KTX_FRAGMENT)
     implementation(Libraries.KTX.KTX_VIEWMODEL)
 
-    // TEST
-    testImplementation(Libraries.Test.JUNIT)
-
-    // AndroidTest
-    androidTestImplementation(Libraries.AndroidTest.ESPRESSO_CORE)
-    androidTestImplementation(Libraries.AndroidTest.JUNIT)
-
     // Hilt
     implementation(Libraries.Hilt.HILT)
     kapt(Libraries.Hilt.KAPT_HILT)
 
-    // Room
-    implementation(Libraries.Room.ROOM)
-    implementation(Libraries.Room.KTX_ROOM)
-    kapt(Libraries.Room.KAPT_ROOM)
-
-    // Retrofit
-    implementation(Libraries.Network.RETROFIT)
-    implementation(Libraries.Network.RETROFIT_CONVERTER)
-
-    // Okhttp
-    implementation(Libraries.Network.OKHTTP)
-    implementation(Libraries.Network.OKHTTP_LOGGING_INTERCEPTOR)
-
-    // DataStore
-    implementation(Libraries.DataStore.DATA_STORE)
-
-    //Coroutine
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-
-    //LifeCycle
-    implementation ("androidx.activity:activity-ktx:1.6.1")
-
-    //Lottie Animation
-    implementation ("com.airbnb.android:lottie:6.3.0")
-
     //Kakao Login
-    implementation ("com.kakao.sdk:v2-user:2.19.0")
+    implementation (Libraries.Kakao.KAKAO_SDK)
+
+    //Firebase SDK
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-analytics")
+
+
+
 }
