@@ -83,6 +83,12 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation("com.google.firebase:firebase-analytics")
 
+    // TEST
+    testImplementation(Libraries.Test.JUNIT)
+
+    // AndroidTest
+    androidTestImplementation(Libraries.AndroidTest.ESPRESSO_CORE)
+    androidTestImplementation(Libraries.AndroidTest.JUNIT)
 
 
 }

@@ -107,6 +107,8 @@ object Libraries {
     object Compose{
         const val COMPOSE_BOM="androidx.compose:compose-bom:2022.10.00"
         const val COMPOSE_UI="androidx.compose.ui:ui"
+        const val COMPOSE_UI_GRAPHICS="androidx.compose.ui:ui-graphics"
+        const val COMPOSE_MATERIAL="androidx.compose.material3:material3"
         const val COMPOSE_PREVIEW="androidx.compose.ui:ui-tooling-preview"
         const val COMPOSE_UI_TOOL="androidx.compose.ui:ui-tooling"
         const val COMPOSE_UI_TEST="androidx.compose.ui:ui-test-junit4"

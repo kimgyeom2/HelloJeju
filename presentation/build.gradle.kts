@@ -41,7 +41,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion="1.3.2"
+        kotlinCompilerExtensionVersion="1.4.3"
     }
 }
 
@@ -103,6 +103,7 @@ dependencies {
 
     //Lottie Animation
     implementation ("com.airbnb.android:lottie:6.3.0")
+    implementation ("com.airbnb.android:lottie-compose:6.3.0")
 
     //Compose
     val composeBom = platform(Libraries.Compose.COMPOSE_BOM)
@@ -110,6 +111,8 @@ dependencies {
     androidTestImplementation(composeBom)
 
     implementation(Libraries.Compose.COMPOSE_UI)
+    implementation(Libraries.Compose.COMPOSE_UI_GRAPHICS)
+    implementation(Libraries.Compose.COMPOSE_MATERIAL)
     implementation(Libraries.Compose.COMPOSE_PREVIEW)
     debugImplementation(Libraries.Compose.COMPOSE_UI_TOOL)
     androidTestImplementation(Libraries.Compose.COMPOSE_UI_TEST)
