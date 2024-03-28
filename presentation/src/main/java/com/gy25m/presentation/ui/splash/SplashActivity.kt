@@ -28,6 +28,7 @@ import com.gy25m.presentation.R
 import com.gy25m.presentation.ui.main.MainActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
 class SplashActivity : ComponentActivity() {

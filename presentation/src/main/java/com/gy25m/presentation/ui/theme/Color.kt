@@ -1,4 +1,4 @@
-package com.gy25m.composepr.ui.theme
+package com.gy25m.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

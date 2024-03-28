@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="com.gy25m.presentation.ui.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name="com.gy25m.presentation.ui.splash.SplashActivity"

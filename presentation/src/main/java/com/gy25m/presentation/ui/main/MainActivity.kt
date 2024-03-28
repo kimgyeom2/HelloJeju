@@ -3,7 +3,7 @@ package com.gy25m.presentation.ui.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gy25m.hellojeju.ui.login.LoginActivity
+import com.gy25m.presentation.ui.login.LoginActivity
 import com.gy25m.presentation.databinding.ActivityMainBinding
 import com.gy25m.presentation.ui.map.MapActivity
 import dagger.hilt.android.AndroidEntryPoint

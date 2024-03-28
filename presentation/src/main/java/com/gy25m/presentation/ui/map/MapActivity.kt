@@ -3,7 +3,7 @@ package com.gy25m.presentation.ui.map
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.gy25m.hellojeju.ui.map.viewmodel.MapViewModel
+import com.gy25m.presentation.ui.map.viewmodel.MapViewModel
 import com.gy25m.presentation.databinding.ActivityMapBinding
 import dagger.hilt.android.AndroidEntryPoint
 

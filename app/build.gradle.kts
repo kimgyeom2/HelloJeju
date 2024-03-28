@@ -76,9 +76,6 @@ dependencies {
     implementation(Libraries.Hilt.HILT)
     kapt(Libraries.Hilt.KAPT_HILT)
 
-    //Kakao Login
-    implementation (Libraries.Kakao.KAKAO_SDK)
-
     //Firebase SDK
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation("com.google.firebase:firebase-analytics")

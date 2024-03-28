@@ -120,4 +120,6 @@ dependencies {
     implementation(Libraries.Compose.COMPOSE_ACTIVITY)
     implementation(Libraries.Compose.COMPOSE_VIEWMODEL)
     implementation(Libraries.Compose.COMPOSE_LIVEDATA)
+
+    implementation("com.navercorp.nid:oauth:5.9.0")
 }
